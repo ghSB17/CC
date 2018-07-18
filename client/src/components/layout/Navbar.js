@@ -32,13 +32,11 @@ class Navbar extends Component {
           <Link className="nav-link" to="/news">
             News
           </Link>
-
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/weather">
             Weather
           </Link>
-
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/profile">
