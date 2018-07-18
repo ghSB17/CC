@@ -68,7 +68,7 @@ class Password extends Component {
       const newPwd = {
         password: this.state.password,
         pwdtoken:pwdtoken
-      };
+      }; 
       // console.log(newPwd)
       this.props.updatePwd(newPwd);
     }

@@ -20,7 +20,19 @@ export default {
   },
 
   // retrive weather
-  weatherSearch: function () {
-    return axios.get(`/api/weather`);
+  geoSearch: function () {
+    return axios.get(`/api/weather/geo/08810`);
+  },
+
+  getWeather: function (pos) {
+    return axios.post('/api/weather/today', pos)
+  },
+
+  getDailyWeather:function(pos) {
+    return axios.post('/api/weather/daily', pos)
+  },
+
+  getHourlyWeather: function(pos) {
+    return axios.post('/api/weather/hourly', pos)
   }
 };

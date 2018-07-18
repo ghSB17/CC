@@ -17,6 +17,7 @@ import News from './components/news/News'
 import Board from './components/board/bindex'
 import EditProfile from './components/auth/EditProfile'
 import Password from './components/auth/Password'
+import { WeatherDashboard } from './components/weather/WeatherDashboard';
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -63,6 +64,9 @@ class App extends Component {
               </Switch>
               <Switch>
                 <PrivateRoute exact path="/news" component={News} />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/weather" component={WeatherDashboard} />
               </Switch>
               <Switch>
                 <PrivateRoute exact path="/profile" component={EditProfile} />
