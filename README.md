@@ -1,24 +1,38 @@
 # CommunityConnector
-A React App to keep Community Members Informed and Connected
+A React App to keep Community Members informed and connected
 
 Community Connector is a React App designed to keep Community Members involved, informed and connected.   
 
-It includes 3 components - a Community Bulletin Board that lists all the open issues for the community and a place for each Community Member to be able to offer their feedback.  
+It includes 4 components 
+- A Community Bulletin Board that lists all the open issues for the community and a place for each Community Member to be able to offer their feedback.  
+- A Bulletin Board to post your personal reminders
+- Top news feed from New York times
+- Weather to see the next week's weather forecast
 
 ## Contributors
 * **Sumathi Ganjam** [github](https://github.com/ghSB17)
 * **Efrat Rosmarin** [github](https://github.com/efratrosmarin)
 * **Joyce Santos** [github](https://github.com/puppitty)
 
-## Who this could be helpful for
-This app is designed to help improve communications within communities. Possibilities include Home Owners Associations and small townships.
+## Who could use this app:
+This app is designed to help improve communications within communities. Possibilities include Home Owners Associations and small townships/municipalities.
 
 ## Built With:
 
 - axios,
+- bcryptjs, 
+- body-parser, 
 - classnames,
+- dotenv, 
+- express, 
+- gravatar, 
 - jwt-decode,
+- jsonwebtoken, 
 - moment,
+- mongoose, 
+- Mongo
+- passport, 
+- passport-jwt,
 - react, 
 - react-dom, 
 - react-draggable, 
@@ -29,76 +43,58 @@ This app is designed to help improve communications within communities. Possibil
 - react-scripts, 
 - redux, 
 - redux-thunk, 
-- bcryptjs, 
-- body-parser, 
-- dotenv, 
-- express, 
-- gravatar, 
-- jsonwebtoken, 
-- mongoose, 
-- Mongo
-- passport, 
-- passport-jwt,
 - New York times (API's)
+- openweather API
 
 
 ### ERD
-![Flowchart Image](./notes/JSJSWIM_DB.png)
+![Flowchart Image](./notes/CCModel2.png)
 
 
-### JSJ Swim School 
+### Community Connector
 * Home Page
-![Home page](./notes/Homepage.PNG)
+![Home page](./notes/home.PNG)
 
 * User Login
-![Login](./notes/Login_Register.PNG)
+![Login](./notes/login.PNG)
 
-* User Sign-in 
-![Sign-up Page](./notes/Signup.PNG)
+* User Sign-un 
+![Sign-up Page](./notes/signup.PNG)
 
-* Course Registration 
-![Course Registration](./notes/Course_Registration.PNG)
+* Post feed for Admin 
+![Post feed to admin](./notes/Post_feed.PNG)
 
-* Registration Confirmation
-![Registration Confirmation](./notes/Registered.PNG)
+* Post feed for User 
+![Post feed to User](./notes/Post_user.PNG)
 
-* Courses  
-![Courses](./notes/Courses.png)
+* Bulletin Board
+![Bulletin Board](./notes/bulletinboard.PNG)
 
-* Courses - Error 
-![Courses Error](./notes/Error-AlreadySignedUp.PNG)
+* Top News Feed  
+![Top News Feed](./notes/newsfeed.PNG)
 
-* Registered Email 
-![Registered Email](./notes/RegisteredEmail.PNG)
+* Weather 
+![Courses Error](./notes/weather.PNG)
 
-* Class Confirmation Email 
-![Class Confirmation Email](./notes/ClassSignUp.PNG)
+* Profile 
+![Registered Email](./notes/profile.PNG)
 
-### Admin
-
-* Admin 
-![Admin](./notes/admin.PNG)
-
-* Class Descriptions 
-![Admin - Class Descriptions](./notes/Class_Description.PNG)
-
-* Class Instance 
-![Admin - Class Instance](./notes/Class_Instance.PNG)
 
 ### Quick Start
 
 To run a local / development copy:
 
-1. Update the config.json file:
-```json
-{
-  "development": {
-    "username": YOUR_USERNAME,
-    "password": YOUR_PASSWORD,
-    "database": "jsjswim_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
+Clone the repository and then follow the steps below:
+- cd CommunityApp
+- npm install
+- cd client
+- npm install
+- cd..
+- Create .env file with the following keys:
+  * nytAPI=YOUR_NEWYORKTIMES_KEY
+  *  MONGODB_URI=YOUR_MONGO_DB_INFO
+  *  secretOrKey=YOUR_CODE
+  *  GOOGLE_GEOLOCATION_API_KEY=YOUR_GOOGLE_GEO_LOCATION
+  *  OPEN_WEATHER_API_KEY=YOUR_OPENWEATHERMAP_API
+- npm run dev
 
-2. Create a jsjswim_db database.
